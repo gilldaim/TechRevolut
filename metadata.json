@@ -1,0 +1,6 @@
+{
+  "name": "Tech Revolut",
+  "description": "Professional telecom lead generation platform targeting US customers to resolve plan overpayments and network issues.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

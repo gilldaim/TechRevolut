@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  /* Color theme override names */
+  --color-red-brand: #DC2626;
+  --color-navy-footer: #0F172A;
+  
+  /* Animations */
+  --animate-float: float 4s ease-in-out infinite;
+  --animate-float-delayed: float-delayed 5s ease-in-out infinite;
+  --animate-pulse-slow: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(1deg); }
+}
+
+@keyframes float-delayed {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(10px) rotate(-1deg); }
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.1; transform: scale(1); }
+  50% { opacity: 0.25; transform: scale(1.1); }
+}
+
+/* 3D and Scroll Custom Utilities */
+.perspective-1000 {
+  perspective: 1000px;
+}
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom typing indicator animations */
+@keyframes typing {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+.typing-dot {
+  animation: typing 1s infinite ease-in-out;
+}
+.typing-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.typing-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* 👴 SENIOR-FRIENDLY & ACCESSIBILITY OPTIMIZATIONS (Enlarges relative font sizing, line heights, contrast, and touch targets) */
+.senior-friendly {
+  font-size: 112.5% !important; /* Base font-scale boost */
+}
+
+.senior-friendly p, 
+.senior-friendly li, 
+.senior-friendly span:not(.font-mono), 
+.senior-friendly div:not(.bg-white\/5) {
+  text-shadow: 0 0 1px rgba(0,0,0,0.02) !important;
+}
+
+.senior-friendly p {
+  font-size: 16px !important;
+  line-height: 1.8 !important;
+  color: #1e293b !important; /* Deepen color to high-contrast slate-800 */
+}
+
+.senior-friendly h1 {
+  font-size: 2.85rem !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.015em !important;
+}
+
+.senior-friendly h2 {
+  font-size: 1.85rem !important;
+  line-height: 1.25 !important;
+}
+
+.senior-friendly h3 {
+  font-size: 1.35rem !important;
+  line-height: 1.3 !important;
+}
+
+.senior-friendly input, 
+.senior-friendly select, 
+.senior-friendly textarea {
+  font-size: 14.5px !important;
+  padding: 12px 14px !important;
+  border-width: 2px !important; /* Thicker distinct borders for low visibility */
+  border-color: #cbd5e1 !important;
+}
+
+.senior-friendly button {
+  font-size: 14.5px !important;
+  padding: 12px 16px !important;
+  letter-spacing: 0.02em !important;
+  font-weight: 800 !important;
+}
+
+.senior-friendly #navbar {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+
+/* Accessibility: Comfort Reading Mode (Seniors & Vision Assist) */
+.comfort-mode {
+  font-size: 115% !important;
+}
+.comfort-mode p {
+  font-size: 1.15rem !important;
+  line-height: 1.8 !important;
+  color: #1e293b !important; /* Darker Slate-800 for pristine contrast */
+}
+.comfort-mode h1 {
+  font-size: 2.75rem !important;
+  line-height: 1.2 !important;
+}
+.comfort-mode h2 {
+  font-size: 2.1rem !important;
+  line-height: 1.3 !important;
+}
+.comfort-mode h3 {
+  font-size: 1.55rem !important;
+}
+.comfort-mode span {
+  font-size: 1.05rem;
+}
+.comfort-mode input, .comfort-mode select, .comfort-mode textarea {
+  font-size: 1.15rem !important;
+  min-height: 3.5rem !important;
+}
+.comfort-mode button {
+  font-size: 1.15rem !important;
+  font-weight: 700 !important;
+}
+.comfort-mode label {
+  font-size: 1.1rem !important;
+  font-weight: 700 !important;
+  color: #0f172a !important;
+}
+.comfort-mode .text-xs {
+  font-size: 0.95rem !important;
+}
+.comfort-mode .text-sm {
+  font-size: 1.1rem !important;
+}
+.comfort-mode .text-[11px] {
+  font-size: 0.95rem !important;
+}
+
